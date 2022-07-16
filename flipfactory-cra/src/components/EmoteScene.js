@@ -1,15 +1,17 @@
-import { Box, OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { Box, Html, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import React from "react";
 
 const EmoteScene = () => {
 	console.log("EmoteScene");
 	return (
 		<>
-			<PerspectiveCamera makeDefault position={[-2, 3, -2]}>
+			<Html className='text-center text-zinc-300' position={[0, 0, 0]}>
+				<div>EmoteGoHere</div>
+			</Html>
+
+			<PerspectiveCamera position={[-2, 3, -2]}>
 				<ambientLight intensity={0.3} />
-				<Box args={[10, 10, 10, 10]} position={[0, 0, 0]}>
-					<meshBasicMaterial color='hotpink' />
-				</Box>
+				<spotLight intensity={0.8} position={[0, 0, 4]} />
 			</PerspectiveCamera>
 			<gridHelper args={[10, 10, "black", "gainsboro"]} position={[0, 0, 0]} />
 			<OrbitControls />
