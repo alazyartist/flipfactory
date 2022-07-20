@@ -24,7 +24,7 @@ const Home = () => {
 
 			{/* PageContent */}
 			<WelcomeText />
-			<LaunchVid />
+			{/* <LaunchVid /> */}
 			<Roadmap />
 			<EmoteDisplay />
 			<CommunityLinks />
