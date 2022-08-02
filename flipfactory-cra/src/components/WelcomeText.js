@@ -2,7 +2,7 @@ import React from "react";
 
 const WelcomeText = () => {
 	return (
-		<div className='px-4 text-center'>
+		<div className='px-4 font-inter text-center'>
 			<p>
 				Welcome to the Flip Factory.
 				<br /> Future home of{" "}
