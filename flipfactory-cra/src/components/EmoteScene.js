@@ -1,12 +1,10 @@
 import {
-	Box,
 	Html,
 	OrbitControls,
 	PerspectiveCamera,
 	Plane,
 } from "@react-three/drei";
 import React from "react";
-import { MeshBasicMaterial } from "three";
 import { Frank } from "./Frank";
 const EmoteScene = () => {
 	console.log("EmoteScene");

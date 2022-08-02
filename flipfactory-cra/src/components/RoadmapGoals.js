@@ -17,10 +17,12 @@ const RoadmapGoals = () => {
 	];
 
 	return (
-		<div className='flex flex-col gap-3 p-2 font-inter w-[70%] text-zinc-300 place-self-center place-items-center'>
+		<div className='flex flex-col gap-1 p-2 font-inter w-[90%] text-zinc-300 place-self-center place-items-center'>
 			<div className='font-lucky text-7xl'>ROADMAP</div>
 			{goals.map((goal) => (
-				<div className='rounded-xl bg-zinc-800 p-2 w-full'>{goal}</div>
+				<div className='rounded-xl bg-zinc-800 p-4 drop-shadow-xl w-full'>
+					{goal}
+				</div>
 			))}
 		</div>
 	);

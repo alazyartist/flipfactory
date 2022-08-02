@@ -47,21 +47,23 @@ const ListItem = ({ percent, perk, isLast, perkName }) => {
 
 	return (
 		<div onClick={() => setOpen(!open)} className='h-20'>
-			<li className='flex gap-2 rounded-xl place-items-center bg-zinc-800 font-inter text-zinc-300 p-2'>
-				<div className='text-2xl px-3 text-zinc-500'>{percent}%</div>
+			<li className='flex gap-2 z-10 rounded-xl place-items-center bg-zinc-800 font-inter text-zinc-300 p-2'>
+				<div className='text-2xl px-3 bg-inherit text-center w-20 text-zinc-500'>
+					{percent}%
+				</div>
 				<div>{perkName}</div>
 			</li>
-			{open && (
+			{/* {open && (
 				<div className='left-16 relative w-fit bg-zinc-800 bg-opacity-30 rounded-lg p-1 text-zinc-300'>
 					{!Array.isArray(perk) && perk}
 					<div className=' p-1 flex flex-col'>
 						{Array.isArray(perk) && perk.map((p) => <div>{p}</div>)}
 					</div>
 				</div>
-			)}
+			)} */}
 			{!isLast && (
-				<div className=' z-[-2] left-[.5rem] -top-10  bg-zinc-800 rounded-xl w-5 h-[5.5rem]'>
-					<div className='relative z-[-1] left-[.5rem] rounded-xl h-[5.5rem] w-1 bg-zinc-300'></div>
+				<div className='z-[-2] p-2 ml-[2rem] mt-[-2rem] bg-zinc-800 w-5 h-[5.5rem]'>
+					<div className='z-[-1] m-[0.5] rounded-xl h-[5.5rem] w-1 bg-zinc-300'></div>
 				</div>
 			)}
 		</div>

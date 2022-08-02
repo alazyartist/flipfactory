@@ -1,4 +1,5 @@
 import React from "react";
+import AmbuScene from "../components/AmbuScene";
 import CommunityLinks from "../components/CommunityLinks";
 import EmoteDisplay from "../components/EmoteDisplay";
 import { FFLogo } from "../components/FFLogo";
@@ -29,6 +30,9 @@ const Home = () => {
 
 			{/* PageContent */}
 			<WelcomeText />
+			<div className='w-full h-fit'>
+				<AmbuScene />
+			</div>
 			{/* via-[#eb6550]  */}
 			<div
 				className=' bg-gradient-to-tr from-[#f67c37] 
