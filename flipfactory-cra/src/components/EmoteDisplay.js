@@ -3,9 +3,10 @@ import { Canvas } from "@react-three/fiber";
 import EmoteScene from "./EmoteScene";
 import useStore from "../hooks/useStore";
 const EmoteDisplay = () => {
-	const { count, setCount } = useStore();
+	const { count, setCount, currentAnim } = useStore();
 	return (
 		<div className='flex flex-col place-content-center place-self-center w-full h-[50vh] place-items-center'>
+			<div className='font-lucky text-4xl text-zinc-300'>{currentAnim}</div>
 			<Canvas className='rounded-xl'>
 				<EmoteScene />
 			</Canvas>

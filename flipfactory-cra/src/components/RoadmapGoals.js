@@ -3,17 +3,12 @@ import React from "react";
 const RoadmapGoals = () => {
 	const goals = [
 		"Launch 6942.0 Trickers",
-		"Learn Something",
-		"Go to the gym",
-		"Show Off",
-		"Flip to Earn",
-		"Prepare for Battle",
-		"Drop Pro Shop",
-		"Fit Check",
-		"Battle Simulation",
-		"Discover Location",
-		"Go Meta",
-		"Find Ambu",
+		"Launch Emote Machine 1.0",
+		"WHATS IN THE BOX?",
+		"Hold my emote",
+		"Bits and Pieces: Decoupled Emotes",
+		"Emote Burn to Build",
+		"Emote Machine 2.0: New Emotes",
 	];
 
 	return (
@@ -29,3 +24,15 @@ const RoadmapGoals = () => {
 };
 
 export default RoadmapGoals;
+
+// "Learn Something",
+// "Go to the gym",
+// "Show Off",
+// "Flip to Earn",
+// "Prepare for Battle",
+// "Drop Pro Shop",
+// "Fit Check",
+// "Battle Simulation",
+// "Discover Location",
+// "Go Meta",
+// "Find Ambu",

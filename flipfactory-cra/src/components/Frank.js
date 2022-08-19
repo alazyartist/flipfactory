@@ -5,6 +5,7 @@ import useFollowCam from "./useFollowCam";
 
 export function Frank({ ...props }) {
 	const group = useRef();
+	const setCurrentAnim = useStore((s) => s.setCurrentAnim);
 	//HipsRef attached to skeletons Hips
 	const hipsRef = useRef();
 	const { nodes, materials, animations } = useGLTF("/Frank.glb");
@@ -16,6 +17,7 @@ export function Frank({ ...props }) {
 
 			actions[names[count]].timeScale = 0.7;
 			actions[names[count]].play();
+			setCurrentAnim(names[count]);
 		}
 		console.log(count);
 	}, [count]);
