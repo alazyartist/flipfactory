@@ -3,16 +3,20 @@ import {
 	OrbitControls,
 	PerspectiveCamera,
 	Plane,
+	View,
 } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 import React from "react";
 import { Frank } from "./Frank";
 const EmoteScene = () => {
 	console.log("EmoteScene");
+
 	return (
 		<>
 			{/* <Html className='text-center text-zinc-300' position={[0, 0, 0]}>
 				<div>EmoteGoHere</div>
 			</Html> */}
+			{/* <View track={emoteView}> */}
 			<PerspectiveCamera position={[0, 0, 0]}>
 				<Frank />
 				<Plane
@@ -28,6 +32,7 @@ const EmoteScene = () => {
 					position={[0, 0, 0]}
 				/> */}
 				<OrbitControls
+					makeDefault
 					maxZoom={2}
 					rotateSpeed={0.1}
 					maxPolarAngle={1.5}

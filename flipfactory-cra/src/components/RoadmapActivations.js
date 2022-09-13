@@ -12,29 +12,34 @@ const RoadmapActivations = () => {
 					perk='FlipFactory Roadmap, Train Charachters'
 				/>
 				<ListItem
+					blurred
 					percent={"20"}
-					perkName={"Launch Staking"}
+					perkName={"EM 1.0"}
 					perk={[`Claim Emote`, `get .bvh file(pure motion)`]}
 				/>
 				<ListItem
-					perkName={"Go to the Gym"}
+					blurred
 					percent={"40"}
+					perkName={"Staking"}
 					perk='Merch Drop - Flip Factory and Scrolls of Ambu'
 				/>
 				<ListItem
+					blurred
 					percent={"60"}
-					perkName={"Merch Drop"}
+					perkName={"Flip Factory"}
 					perk='BattleSimulator on SOA.xyz'
 				/>
 				<ListItem
+					blurred
 					percent={"80"}
 					perkName={"Battle Simulator"}
 					perk='RoadMap 2.0 - Otherside Develeopment Begins'
 				/>
 				<ListItem
+					blurred
 					isLast
 					percent={"100"}
-					perkName={"Roadmap 2.0 Unlocked"}
+					perkName={"Roadmap 2.0 -SOA- Unlocked"}
 					perk='RoadMap 2.0 - Otherside Develeopment Begins'
 				/>
 			</ul>
@@ -42,13 +47,15 @@ const RoadmapActivations = () => {
 	);
 };
 
-const ListItem = ({ percent, perk, isLast, perkName }) => {
+const ListItem = ({ blurred, percent, perk, isLast, perkName }) => {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<div onClick={() => setOpen(!open)} className='h-20'>
+		<div
+			onClick={() => setOpen(!open)}
+			className={`h-20 ${blurred ? `blur-xl` : `blur-none`}`}>
 			<li className='flex gap-2 z-10 rounded-xl place-items-center bg-zinc-800 font-inter text-zinc-300 p-2'>
-				<div className='text-2xl px-3 bg-inherit text-center w-20 text-zinc-500'>
+				<div className='text-2xl z-20 px-3 bg-inherit text-center w-20 text-zinc-500'>
 					{percent}%
 				</div>
 				<div>{perkName}</div>
@@ -62,7 +69,10 @@ const ListItem = ({ percent, perk, isLast, perkName }) => {
 				</div>
 			)} */}
 			{!isLast && (
-				<div className='z-[-2] p-2 ml-[2rem] mt-[-2rem] bg-zinc-800 w-5 h-[5.5rem]'>
+				<div
+					className={` ${
+						blurred ? `blur-xl` : `blur-none`
+					} p-2 ml-[2rem] z-[-2] mt-[-2rem] bg-zinc-800 w-5 h-[5.5rem]`}>
 					<div className='z-[-1] m-[0.5] rounded-xl h-[5.5rem] w-1 bg-zinc-300'></div>
 				</div>
 			)}
