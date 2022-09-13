@@ -12,31 +12,26 @@ const RoadmapActivations = () => {
 					perk='FlipFactory Roadmap, Train Charachters'
 				/>
 				<ListItem
-					blurred
 					percent={"20"}
 					perkName={"EM 1.0"}
 					perk={[`Claim Emote`, `get .bvh file(pure motion)`]}
 				/>
 				<ListItem
-					blurred
 					percent={"40"}
 					perkName={"Staking"}
 					perk='Merch Drop - Flip Factory and Scrolls of Ambu'
 				/>
 				<ListItem
-					blurred
 					percent={"60"}
 					perkName={"Flip Factory"}
 					perk='BattleSimulator on SOA.xyz'
 				/>
 				<ListItem
-					blurred
 					percent={"80"}
 					perkName={"Battle Simulator"}
 					perk='RoadMap 2.0 - Otherside Develeopment Begins'
 				/>
 				<ListItem
-					blurred
 					isLast
 					percent={"100"}
 					perkName={"Roadmap 2.0 -SOA- Unlocked"}

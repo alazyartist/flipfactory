@@ -5,7 +5,7 @@ function App() {
 	return (
 		<>
 			<div className='w-full h-full bg-gradient-to-b from-teal-500 z-10'>
-				<div className='bg-[#ff1770]  overflow-auto w-full h-full fixed flex flex-col'>
+				<div className='bg-[#ff1770]  overflow-y-auto w-full h-full fixed flex flex-col'>
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/scroll' element={<Scroll />} />

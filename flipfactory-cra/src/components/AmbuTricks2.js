@@ -6,8 +6,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+import useFollowCam from "./useFollowCam";
 export function AmbuTricks(props) {
 	const group = useRef();
+	const hipsRef = useRef();
 	const [isPlaying, setIsPlaying] = useState(true);
 	const { nodes, materials, animations } = useGLTF("/AmbuTricks.glb");
 	const { mixer, actions, names } = useAnimations(animations, group);
@@ -28,6 +30,7 @@ export function AmbuTricks(props) {
 		[group.current],
 		isPlaying
 	);
+	useFollowCam(hipsRef);
 
 	// const sccroll = () => {
 	// 	setTimeout(() => {
@@ -72,7 +75,7 @@ export function AmbuTricks(props) {
 					position={[0, -0.15, -0.03]}
 					rotation={[Math.PI / 2, 0, 0]}
 					scale={0.25}>
-					<primitive object={nodes.Hips} />
+					<primitive ref={hipsRef} object={nodes.Hips} />
 					<group name='_arm_R'>
 						<skinnedMesh
 							frustumCulled={false}

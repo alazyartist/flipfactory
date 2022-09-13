@@ -3,37 +3,36 @@ import {
 	OrbitControls,
 	PerspectiveCamera,
 	Plane,
+	Sky,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import { AmbuBtwist } from "./AmbuBtwist";
 import { AmbuStill } from "./AmbuStill";
 import { AmbuTricks } from "./AmbuTricks2";
+import { Hills } from "./forScroll/Landscape";
 
 const AmbuScene = () => {
 	return (
-		<div className='w-full h-[30vw]'>
-			<Canvas className=' h-full w-full'>
-				<PerspectiveCamera>
-					<Environment preset='park' background blur={10} />
+		<div className='w-full rounded-2xl p-3 overflow-hidden h-[30vh]'>
+			<Canvas className=' h-full rounded-2xl w-full'>
+				<PerspectiveCamera makeDefault position={[0, 0.3, 18]}>
+					<Environment preset='park' />
 					<spotLight intensity={0.6} position={[0, 2, 10]} />
 					<ambientLight intensity={0.4} />
-					{/* <AmbuStill /> */}
-					{/* <AmbuBtwist /> */}
+					<Hills />
 					<AmbuTricks />
-					{/* <gridHelper
-						args={[20, 20, `black`, `gainsboro`]}
-						position={[0, 0, 0]}
-					/> */}
-					<Plane
-						args={[10, 10]}
-						position={[0, 0, 0]}
-						rotation={[-Math.PI / 2, 0, 0]}>
-						<meshPhongMaterial color={0x809639} />
-					</Plane>
+
+					<Sky
+						distance={450000}
+						sunPosition={[0, 1, 0]}
+						inclination={0}
+						azimuth={0.25}
+					/>
 				</PerspectiveCamera>
-				<OrbitControls />
+				{/* <OrbitControls /> */}
 			</Canvas>
+			{/*  */}
 		</div>
 	);
 };
