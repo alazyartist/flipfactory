@@ -10,11 +10,11 @@ const ExampleCharachterCarousel = () => {
 		{ src: "./Charachters/6.png", name: "" },
 	];
 	return (
-		<div className='flex w-full overflow-x-auto p-2 flex-shrink-0'>
-			<div className='flex w-fit no-scrollbar snap-x snap-mandatory flex-shrink-0 overflow-x-auto gap-4 p-2'>
+		<div className='flex w-full overflow-x-auto py-5 p-3 flex-shrink-0'>
+			<div className='flex w-fit no-scrollbar snap-x snap-mandatory flex-shrink-0 overflow-x-auto gap-4'>
 				{exampleCharachters.map((charachter) => (
 					<img
-						className='snap-start bg-gradient-to-b to-zinc-400 w-full rounded-xl'
+						className='snap-start bg-gradient-to-b from-teal-500 to-zinc-300 w-full rounded-xl'
 						src={charachter.src}
 					/>
 				))}

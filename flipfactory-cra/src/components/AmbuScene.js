@@ -14,7 +14,7 @@ import { Hills } from "./forScroll/Landscape";
 
 const AmbuScene = () => {
 	return (
-		<div className='w-full rounded-2xl p-3 overflow-hidden h-[30vh]'>
+		<div className='w-full rounded-2xl p-2 overflow-hidden h-[30vh]'>
 			<Canvas className=' h-full rounded-2xl w-full'>
 				<PerspectiveCamera makeDefault position={[0, 0.3, 18]}>
 					<Environment preset='park' />

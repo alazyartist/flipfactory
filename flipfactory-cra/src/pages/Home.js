@@ -3,8 +3,9 @@ import AmbuScene from "../components/AmbuScene";
 import CommunityLinks from "../components/CommunityLinks";
 import EmoteDisplay from "../components/EmoteDisplay";
 import ExampleCharachterCarousel from "../components/ExampleCharachterCarousel";
-import { FFLogo } from "../components/FFLogo";
-import { FlipFactoryLogo } from "../components/FlipFactoryLogo";
+import FAQ from "../components/FAQ";
+import FlipFactoryLogoComposite from "../components/FlipFactoryLogoComposite";
+import LandingVideo from "../components/LandingVideo";
 import LaunchVid from "../components/LaunchVid";
 import OthersideLandPlots from "../components/OthersideLandPlots";
 import RoadmapActivations from "../components/RoadmapActivations";
@@ -18,48 +19,42 @@ const Home = () => {
 			{/* <h1 className='p-2 font-bold text-3xl flex place-content-center'>
 				Flip Factory
 			</h1> */}
-			<div className='w-[100vw] overflow-hidden'>
-				<video className='h-full w-full' loop muted autoPlay>
-					<source src='./EM-vertical.mp4' type='video/mp4' />
-				</video>
-			</div>
-			<div id='Logo Container' className='pt-4 place-self-center w-[70vw]'>
-				<div className='absolute top-5 left-5 w-[20vw]'>
-					<FFLogo />
-				</div>
-				<div className='pt-8'>
-					{/* <FlipFactoryLogo /> */}
-					<div className='text-center font-lucky font-bold text-7xl text-zinc-50'>
-						Flip Factory
+			<LandingVideo />
+			<div className='p-4 flex flex-col gap-2'>
+				<div className='p-2'>
+					<div className='flex flex-col rounded-xl place-content-center w-full bg-teal-400'>
+						<FlipFactoryLogoComposite />
+						{/* PageContent */}
+						<WelcomeText />
 					</div>
 				</div>
-			</div>
+				<div className='w-full h-fit'>
+					<AmbuScene />
+				</div>
+				{/* via-[#eb6550]  */}
+				<div className='p-2'>
+					<div
+						className='rounded-xl bg-gradient-to-tr from-[#f67c37] 
+					to-[#ff1770] flex flex-col'>
+						{/* <TrickedexEmbed /> */}
+						<RoadmapGoals />
+						<RoadmapActivations />
+					</div>
+				</div>
+				<ExampleCharachterCarousel />
+				<OthersideLandPlots />
 
-			{/* PageContent */}
-			<WelcomeText />
-			<div className='w-full h-fit'>
-				<AmbuScene />
+				<div className='bg-zinc-800 text-5xl rounded-xl py-6 p-2 text-zinc-300 font-lucky place-items-center place-content-center flex'>
+					<div>BUY OUR SHIT</div>
+				</div>
+				<div className='  p-2 flex flex-col'>
+					{/* <TrickedexEmbed /> */}
+					<EmoteDisplay />
+					<FAQ />
+				</div>
+				{/* <LaunchVid /> */}
+				<CommunityLinks />
 			</div>
-			{/* via-[#eb6550]  */}
-			<div
-				className=' bg-gradient-to-tr from-[#f67c37] 
-			to-[#ff1770] p-2 flex flex-col'>
-				{/* <TrickedexEmbed /> */}
-				<RoadmapGoals />
-				<RoadmapActivations />
-			</div>
-			<ExampleCharachterCarousel />
-			<OthersideLandPlots />
-
-			<div className='bg-zinc-800 text-5xl py-6 p-2 text-zinc-300 font-lucky place-items-center place-content-center flex'>
-				<div>BUY OUR SHIT</div>
-			</div>
-			<div className=' bg-gradient-to-b from-[#f67c37] p-2 flex flex-col'>
-				{/* <TrickedexEmbed /> */}
-				<EmoteDisplay />
-			</div>
-			{/* <LaunchVid /> */}
-			<CommunityLinks />
 		</>
 	);
 };
