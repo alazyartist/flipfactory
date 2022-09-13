@@ -30,6 +30,9 @@ const Home = () => {
 
 			{/* PageContent */}
 			<WelcomeText />
+			<video className='h-full w-full' loop muted autoPlay>
+				<source src='./EM-vertical.mp4' type='video/mp4' />
+			</video>
 			<div className='w-full h-fit'>
 				<AmbuScene />
 			</div>
@@ -40,6 +43,13 @@ const Home = () => {
 				{/* <TrickedexEmbed /> */}
 				<RoadmapGoals />
 				<RoadmapActivations />
+			</div>
+			<div className='h-fit w-full'>
+				<img className='rounded-xl p-2 py-1 w-full' src='./Otherside108.png' />
+				<img
+					className='rounded-xl p-2 px-1 w-full'
+					src='./Otherside64420.png'
+				/>
 			</div>
 			<div className='bg-zinc-800 text-5xl py-6 p-2 text-zinc-300 font-lucky place-items-center place-content-center flex'>
 				<div>BUY OUR SHIT</div>
