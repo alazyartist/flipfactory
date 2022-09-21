@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AmbuScene from "../components/AmbuScene";
+import BatteriesIncluded from "../components/BatteriesIncluded";
 import CommunityLinks from "../components/CommunityLinks";
 import EmoteDisplay from "../components/EmoteDisplay";
 import ExampleCharachterCarousel from "../components/ExampleCharachterCarousel";
@@ -12,6 +14,9 @@ import RoadmapActivations from "../components/RoadmapActivations";
 import RoadmapGoals from "../components/RoadmapGoals";
 import TrickedexEmbed from "../components/TrickedexEmbed";
 import WelcomeText from "../components/WelcomeText";
+import WillWorkWithMetaverses from "../components/WillWorkWithMetaverses";
+import { IoIosPaper } from "react-icons/io";
+import OthersideLandText from "../components/litepaper/OthersideLandText";
 
 const Home = () => {
 	return (
@@ -21,16 +26,23 @@ const Home = () => {
 			</h1> */}
 			<LandingVideo />
 			<div className='p-4 flex flex-col gap-2'>
-				<div className='p-2'>
+				<div className='relative p-2'>
 					<div className='flex flex-col rounded-xl place-content-center w-full bg-teal-400'>
 						<FlipFactoryLogoComposite />
 						{/* PageContent */}
 						<WelcomeText />
 					</div>
 				</div>
+				<Link
+					className='flex place-content-center place-items-center w-full text-center text-3xl font-inter font-black text-fuchsia-500'
+					to={"/litepaper"}>
+					<IoIosPaper className='text-zinc-200' />
+					Litepaper
+				</Link>
 				<div className='w-full h-fit'>
 					<AmbuScene />
 				</div>
+				<WillWorkWithMetaverses />
 				{/* via-[#eb6550]  */}
 				<div className='p-2'>
 					<div
@@ -43,6 +55,7 @@ const Home = () => {
 				</div>
 				<ExampleCharachterCarousel />
 				<OthersideLandPlots />
+				<BatteriesIncluded />
 
 				<div className='bg-zinc-800 text-5xl rounded-xl py-6 p-2 text-zinc-300 font-lucky place-items-center place-content-center flex'>
 					<div>BUY OUR SHIT</div>

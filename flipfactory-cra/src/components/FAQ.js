@@ -36,16 +36,12 @@ const FAQ = () => {
 		{
 			title: "What are my rights",
 			description:
-				"Owning an NFTricker or Emote NFT offered by Flip Factory gives holders full commercial rights and freedom to create or monetize as they see fit. ",
+				//TODO
+				"Owning a Union Member or Emote NFT offered by Flip Factory gives holders full commercial rights and freedom to create or monetize as they see fit. ",
 		},
 		{
 			title: "When mint?",
 			description: "TBA Still",
-		},
-		{
-			title: "Does minting destroy the planet",
-			description:
-				"We are choosing to mint our NFTrickers after the Ethereum merge to reduce energy consumption. Currently predictions of energy consumption post merge are forecasted to be reduced by up to 99.95%.Bring on ETH2.0!*",
 		},
 		// { title: "Emote Machine 2.0: Versatility", description: },
 		// { title: "Emote Machine 2.2: Create", description: },

@@ -34,10 +34,11 @@ const RoadmapGoals = () => {
 				"After many toiling nights in the Factory, it seems our foreman has finally developed the perfect way to merge the base movements together to form all new expressions. Though, the law of equivalent exchange comes with a cost, a warning on the machine reads: Burn at your own risk, unusable product discarded.",
 		},
 		{
-			title: "Suit",
+			title: "Emote Machine 1.1: Versatility Update",
 			description:
-				"Ambu fell in love with movement arts of all kinds after learning of Tricking during his travels of the cosmos. Excitingly it seems he is finally ready to introduce these passions he grew to love and share with the world! Using whatever a Koda uses to conjur it’s magic, Ambu has forged some blank scrolls ready for imprinting, will you suit up and help Ambu?",
+				"Adding more common everyday movements like waving, dancing, and exclamations",
 		},
+
 		// { title: "Emote Machine 2.0: Versatility", description: },
 		// { title: "Emote Machine 2.2: Create", description: },
 	];

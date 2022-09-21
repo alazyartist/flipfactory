@@ -27,7 +27,7 @@ export function AmbuTricks(props) {
 			// console.log(group);
 			console.log(isPlaying);
 		},
-		[group.current],
+		[group],
 		isPlaying
 	);
 	useFollowCam(hipsRef);

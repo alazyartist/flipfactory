@@ -13,7 +13,7 @@ const RoadmapActivations = () => {
 				/>
 				<ListItem
 					percent={"20"}
-					perkName={"EM 1.0"}
+					perkName={"Emote Machine 1.0"}
 					perk={[`Claim Emote`, `get .bvh file(pure motion)`]}
 				/>
 				<ListItem
@@ -54,20 +54,20 @@ const ListItem = ({ blurred, percent, perk, isLast, perkName }) => {
 					{percent}%
 				</div>
 				<div>{perkName}</div>
-			</li>
-			{/* {open && (
-				<div className='left-16 relative w-fit bg-zinc-800 bg-opacity-30 rounded-lg p-1 text-zinc-300'>
-					{!Array.isArray(perk) && perk}
-					<div className=' p-1 flex flex-col'>
-						{Array.isArray(perk) && perk.map((p) => <div>{p}</div>)}
+				{open && (
+					<div className='left-16 w-fit bg-zinc-800 bg-opacity-30 rounded-lg p-1 text-zinc-300'>
+						{!Array.isArray(perk) && perk}
+						<div className=' p-1 flex flex-col'>
+							{Array.isArray(perk) && perk.map((p) => <div>{p}</div>)}
+						</div>
 					</div>
-				</div>
-			)} */}
+				)}
+			</li>
 			{!isLast && (
 				<div
 					className={` ${
 						blurred ? `blur-xl` : `blur-none`
-					} p-2 ml-[2rem] z-[-2] mt-[-2rem] bg-zinc-800 w-5 h-[5.5rem]`}>
+					} p-2 ml-[2rem] z-[-2] top-10 absolute mt-[-2rem] bg-zinc-800 w-5 h-[5.5rem]`}>
 					<div className='z-[-1] m-[0.5] rounded-xl h-[5.5rem] w-1 bg-zinc-300'></div>
 				</div>
 			)}

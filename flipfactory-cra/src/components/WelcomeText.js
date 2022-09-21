@@ -2,14 +2,12 @@ import React from "react";
 
 const WelcomeText = () => {
 	return (
-		<div className='p-4 font-inter text-center pb-20'>
+		<div className='p-4 font-inter text-center text-teal-900 pb-20'>
 			<p>
-				Welcome to the Flip Factory.
-				<br /> Future home of{" "}
-				<span className='font-semibold'>the Metaverse's best Mocap!</span>
+				<span className='font-lucky text-3xl'>mint.make.mote.</span>
 			</p>
 			<div className='text-xl font-inter font-bold'>
-				We have all things that are good.
+				Your one stop shop for <br /> emotes across any metaverse.
 			</div>
 		</div>
 	);
