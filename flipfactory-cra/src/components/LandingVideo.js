@@ -2,8 +2,13 @@ import React from "react";
 
 const LandingVideo = () => {
 	return (
-		<div className='w-[100vw]'>
-			<video className=' h-full w-full' loop muted controls={false} autoPlay>
+		<div className='absolute z-[-5] top-0 w-[100vw] h-[100vh]'>
+			<video
+				className='scale-[1.75] h-full overflow-hidden w-full'
+				loop
+				muted
+				controls={false}
+				autoPlay>
 				<source src='./EM-vertical.mp4' type='video/mp4' />
 			</video>
 		</div>

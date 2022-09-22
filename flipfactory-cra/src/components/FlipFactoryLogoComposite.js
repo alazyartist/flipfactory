@@ -3,8 +3,10 @@ import { FFLogo } from "../components/FFLogo";
 
 const FlipFactoryLogoComposite = () => {
 	return (
-		<div id='Logo Container' className='static pt-4 place-self-center w-[70vw]'>
-			<div className='absolute fill-teal-200 top-[5vh] left-10 w-[20vw]'>
+		<div
+			id='Logo Container'
+			className='static group-hover:opacity-60 pt-4 place-self-center w-[70vw]'>
+			<div className='absolute  fill-teal-200 top-[5vh] left-10 w-[20vw]'>
 				<FFLogo />
 			</div>
 			<div className='pt-8'>
