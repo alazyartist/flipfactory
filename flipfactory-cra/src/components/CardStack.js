@@ -72,7 +72,7 @@ export default function CardStack() {
 			<div className='text-zinc-300 font-lucky text-3xl text-center'>
 				Swipe Me
 			</div>
-			<div className='relative w-full overflow-hidden h-[55vh]'>
+			<div className='relative w-full flex place-items-center overflow-hidden h-[55vh]'>
 				{props.map(({ x, y, rot, scale }, i) => (
 					<animated.div className={styles.deck} key={i} style={{ x, y }}>
 						{/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
