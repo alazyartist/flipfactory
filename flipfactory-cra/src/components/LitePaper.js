@@ -1,4 +1,6 @@
 import React from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
 import ComingMetaverses from "./litepaper/ComingMetaverses";
 import Emotesemotesemotes from "./litepaper/Emotesemotesemotes";
 import How from "./litepaper/How";
@@ -12,7 +14,10 @@ import OthersideLandPlots from "./OthersideLandPlots";
 const LitePaper = () => {
 	return (
 		<div className='w-full p-4 h-full no-scrollbar overflow-y-scroll font-inter text-zinc-300'>
-			<div className='font-inter font-black pb-4 text-5xl'>litepaper</div>
+			<Link to={"/"} className='flex gap-2'>
+				<IoIosArrowBack className='text-5xl' />
+				<div className='font-inter font-black pb-4 text-5xl'>litepaper</div>
+			</Link>
 			<ComingMetaverses />
 			<Emotesemotesemotes />
 			<WhyThisTeam />

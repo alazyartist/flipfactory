@@ -29,15 +29,6 @@ const Home = () => {
 			{/* <h1 className='p-2 font-bold text-3xl flex place-content-center'>
 				Flip Factory
 			</h1> */}
-			<Suspense
-				fallback={
-					<div className='absolute top-[50vh] text-3xl text-teal-200 font-lucky w-full p-8 flex place-items-center place-content-center'>
-						{/* <FlipFactoryLogoComposite /> */}
-						getting factory feed
-					</div>
-				}>
-				<LandingVideo />
-			</Suspense>
 			<div className='p-4 flex flex-col gap-2'>
 				<div className='relative p-2'>
 					<div className='flex flex-col group rounded-xl place-content-center hover:bg-opacity-5 w-full bg-teal-400'>
@@ -46,9 +37,19 @@ const Home = () => {
 						<WelcomeText />
 					</div>
 				</div>
-				<div className='h-[40vh] w-[100vw]'></div>
+				<div className='h-[40vh] w-full'>
+					<Suspense
+						fallback={
+							<div className='text-2xl sm:text-3xl text-teal-200 font-lucky w-full p-8 text-center flex place-items-center place-content-center'>
+								{/* <FlipFactoryLogoComposite /> */}
+								getting factory feed
+							</div>
+						}>
+						<LandingVideo />
+					</Suspense>
+				</div>
 				<Link
-					className='flex place-content-center place-items-center w-full text-center text-3xl font-inter font-black text-zinc-300'
+					className='flex place-content-center rounded-xl bg-zinc-800 p-2 place-items-center w-full text-center text-3xl font-inter font-black text-zinc-300'
 					to={"/litepaper"}>
 					<IoIosPaper className='text-zinc-200' />
 					Litepaper

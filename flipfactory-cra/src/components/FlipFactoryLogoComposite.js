@@ -11,8 +11,9 @@ const FlipFactoryLogoComposite = () => {
 			</div>
 			<div className='pt-8'>
 				{/* <FlipFactoryLogo /> */}
-				<div className='text-center font-lucky font-bold text-7xl text-teal-200'>
-					Flip Factory
+				<div className='text-center font-lucky font-bold text-5xl sm:text-7xl text-teal-200'>
+					Flip
+					<br /> Factory
 				</div>
 			</div>
 		</div>

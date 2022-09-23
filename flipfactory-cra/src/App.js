@@ -5,8 +5,8 @@ import Scroll from "./pages/Scroll";
 function App() {
 	return (
 		<>
-			<div className='w-full h-full z-10'>
-				<div className='bg-zinc-900  overflow-y-auto w-full h-full fixed flex flex-col'>
+			<div className='w-[100vw] overflow-hidden h-full z-10'>
+				<div className='bg-zinc-900  overflow-y-auto overflow-x-hidden w-full h-full fixed flex flex-col'>
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/litepaper' element={<LitePaper />} />

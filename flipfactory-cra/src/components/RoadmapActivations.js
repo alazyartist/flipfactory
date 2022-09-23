@@ -35,7 +35,7 @@ const RoadmapActivations = () => {
 	return (
 		<div className='p-2 flex flex-col place-content-center place-items-center'>
 			<ul className=' flex flex-col w-[80vw]'>
-				<h1 className='text-6xl text-center font-lucky text-zinc-300 font-semibold'>
+				<h1 className='text-5xl sm:text-6xl text-center font-lucky text-zinc-300 font-semibold'>
 					Roadmap Activations
 				</h1>
 				{items.map((item) => (
