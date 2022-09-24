@@ -19,7 +19,6 @@ export function Frank({ ...props }) {
 			actions[names[count]].play();
 			setCurrentAnim(names[count]);
 		}
-		console.log(count);
 	}, [count]);
 	useFollowCam(hipsRef);
 	return (

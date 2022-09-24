@@ -40,6 +40,7 @@ const RoadmapActivations = () => {
 				</h1>
 				{items.map((item) => (
 					<ListItem
+						key={item.perk + Math.random().toString()}
 						isLast
 						percent={item.percent}
 						perkName={item.perkName}
@@ -69,7 +70,7 @@ const ListItem = ({ blurred, percent, perk, isLast, perkName }) => {
 					<div className='left-16 w-fit bg-zinc-800 bg-opacity-30 rounded-lg p-1 text-zinc-300'>
 						{!Array.isArray(perk) && perk}
 						<div className=' p-1 flex flex-col'>
-							{Array.isArray(perk) && perk.map((p) => <div>{p}</div>)}
+							{Array.isArray(perk) && perk.map((p) => <div key={p}>{p}</div>)}
 						</div>
 					</div>
 				)}

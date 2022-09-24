@@ -10,7 +10,6 @@ export function AmbuBtwist(props) {
 	const { nodes, materials, animations } = useGLTF("/AmbuBtwist.glb");
 	const { actions } = useAnimations(animations, group);
 
-	console.log(actions);
 	actions["Btwist"].play();
 	useEffect(() => {}, []);
 	return (

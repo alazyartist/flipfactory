@@ -1,14 +1,6 @@
-import {
-	Environment,
-	OrbitControls,
-	PerspectiveCamera,
-	Plane,
-	Sky,
-} from "@react-three/drei";
+import { Environment, PerspectiveCamera, Sky } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
-import { AmbuBtwist } from "./AmbuBtwist";
-import { AmbuStill } from "./AmbuStill";
 import { AmbuTricks } from "./AmbuTricks2";
 import { Hills } from "./forScroll/Landscape";
 
@@ -30,9 +22,7 @@ const AmbuScene = () => {
 						azimuth={0.25}
 					/>
 				</PerspectiveCamera>
-				{/* <OrbitControls /> */}
 			</Canvas>
-			{/*  */}
 		</div>
 	);
 };

@@ -60,7 +60,7 @@ const RoadmapGoals = () => {
 		<div className='flex flex-col gap-1 p-2 font-inter w-[90%] text-zinc-300 place-self-center place-items-center'>
 			<div className='font-lucky text-5xl sm:text-6xl'>ROADMAP</div>
 			{goals.map((goal) => (
-				<GoalDisplay goal={goal} />
+				<GoalDisplay key={goal.title} goal={goal} />
 			))}
 		</div>
 	);

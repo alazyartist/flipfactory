@@ -37,7 +37,6 @@ const ExampleCharachterCarousel = () => {
 				<div className='flex flex-col'>
 					<div className='w-full h-[60vh] flex overflow-hidden'>
 						{cardAnim((style, i) => {
-							console.log(i);
 							return (
 								<animated.img
 									key={i}

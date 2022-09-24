@@ -64,7 +64,7 @@ const FAQ = () => {
 		<div className='flex flex-col gap-1 p-2 font-inter w-[90%] text-zinc-300 place-self-center place-items-center'>
 			<div className='font-lucky text-7xl'>FAQ's</div>
 			{faqList.map((faq) => (
-				<FAQDisplay faq={faq} />
+				<FAQDisplay key={faq.title} faq={faq} />
 			))}
 		</div>
 	);

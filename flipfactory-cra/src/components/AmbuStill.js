@@ -9,9 +9,7 @@ export function AmbuStill(props) {
 	const group = useRef();
 	const { nodes, materials, animations } = useGLTF("/AmbuStill.glb");
 	const { actions } = useAnimations(animations, group);
-	useEffect(() => {
-		console.log(materials);
-	}, []);
+
 	return (
 		<group
 			scale={10}

@@ -27,7 +27,6 @@ export default function useFollowCam(hipsRef) {
 		let posArr = [x, y, z];
 		posArr = posArr.map((p) => p * 0.01);
 		let vec = new Vector3(posArr[0], 0.5, posArr[1]);
-		// console.log(camera);
 		if (hipsRef.current && camera) {
 			camera.quaternion.set(quat, 0.1);
 			camera.lookAt(vec, 1);

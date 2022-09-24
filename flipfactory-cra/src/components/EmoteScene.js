@@ -5,12 +5,9 @@ import {
 	Plane,
 	View,
 } from "@react-three/drei";
-import { useThree } from "@react-three/fiber";
 import React from "react";
 import { Frank } from "./Frank";
 const EmoteScene = () => {
-	console.log("EmoteScene");
-
 	return (
 		<>
 			{/* <Html className='text-center text-zinc-300' position={[0, 0, 0]}>

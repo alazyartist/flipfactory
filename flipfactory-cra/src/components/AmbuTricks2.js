@@ -18,34 +18,23 @@ export function AmbuTricks(props) {
 		mixer.stopAllAction();
 		mixer.timeScale = 0.4;
 		// actions.Btwist.loop = THREE.LoopOnce;
-		console.log(names);
 		actions.Btwist.clampWhenFinished = true;
 		actions["CorkX4>Dub"].play();
 	}, []);
-	useEffect(
-		() => {
-			// console.log(group);
-			console.log(isPlaying);
-		},
-		[group],
-		isPlaying
-	);
+
 	useFollowCam(hipsRef);
 
 	// const sccroll = () => {
 	// 	setTimeout(() => {
-	// 		console.log(scroll.offset);
 	// 		sccroll();
 	// 	}, 1000);
 	// };
 	// sccroll();
 	useFrame((state, delta) => {
-		// console.log(scrollData);
 		if (props.scrollable) {
 			const action = actions["Btwist"];
 			// The offset is between 0 and 1, you can apply it to your models any way you like
 			const offset = scroll.offset;
-			// console.log(offset);
 			// action.time = THREE.MathUtils.damp(
 			// 	action.time,
 			// 	action.getClip().duration * offset,

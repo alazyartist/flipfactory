@@ -40,9 +40,7 @@ const ScrollingCanvas = () => {
 	// 		</>
 	// 	);
 	// };
-	useEffect(() => {
-		console.log(ambuView);
-	}, [ambuView]);
+
 	return (
 		<>
 			{/* <div className='w-full no-scrollbar snap-y snap-mandatory overflow-scroll'>

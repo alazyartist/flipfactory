@@ -7,10 +7,8 @@ const LandingVideo = () => {
 	useLayoutEffect(() => {
 		if (window.innerWidth > 960) {
 			setvsrc("./EM-wide.mp4");
-			console.log("wide");
 		} else if (window.innerWidth < 960) {
 			setvsrc("./EM-vertical.mp4");
-			console.log("vert");
 		}
 	}, [vsrc]);
 	return (
