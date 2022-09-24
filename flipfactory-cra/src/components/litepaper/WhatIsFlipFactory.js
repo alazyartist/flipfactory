@@ -3,7 +3,7 @@ import React from "react";
 const WhatIsFlipFactory = () => {
 	return (
 		<>
-			<div className='font-bold text-xl'>What is Flip Factory</div>
+			<div className='font-lucky text-2xl'>What is Flip Factory</div>
 
 			<div className='text-xs font-light'>
 				Flip Factory is the metaverse’s first and most versatile Emote Shop.

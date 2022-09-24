@@ -3,7 +3,7 @@ import React from "react";
 const OthersideLandText = () => {
 	return (
 		<>
-			<div className='font-bold text-xl'>Land</div>
+			<div className='font-lucky text-2xl'>Land</div>
 
 			<div className='text-xs font-light'>
 				{" "}

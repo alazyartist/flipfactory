@@ -3,7 +3,7 @@ import React from "react";
 const Emotesemotesemotes = () => {
 	return (
 		<div>
-			<div className='font-bold text-xl'>EMOTES! EMOTES! EMOTES!</div>
+			<div className='font-lucky text-2xl'>EMOTES! EMOTES! EMOTES!</div>
 			<div className='text-xs font-light'>
 				A set of movements that you can play on command to show some emotion,
 				the concept of an emote is not new. It’s been permeating video games for

@@ -3,7 +3,7 @@ import React from "react";
 const How = () => {
 	return (
 		<>
-			<div className='font-bold text-xl'>
+			<div className='font-lucky text-2xl'>
 				How? → The FLIP Factory → The Scrolls of Ambu
 			</div>
 

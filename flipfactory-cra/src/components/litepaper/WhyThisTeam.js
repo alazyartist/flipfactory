@@ -3,9 +3,9 @@ import React from "react";
 const WhyThisTeam = () => {
 	return (
 		<>
-			<div className='font-bold text-xl'>Already in Development</div>
+			<div className='font-lucky text-2xl'>Already in Development</div>
 
-			<div className='text-xs font-light'>
+			<div className='text-xs font-light relative'>
 				Our team has been building the foundations for something like this for
 				well over a year now. Our lead developer is obsessed with the movement
 				arts and what the human body is capable of; specifically, the acrobatic
@@ -27,10 +27,10 @@ const WhyThisTeam = () => {
 				Marvel, and more found here →
 				<a
 					target={"_blank"}
-					className='inline w-fit text-fuchsia-300'
+					className='absolute inline w-fit'
 					href='https://www.xsens.com/productions?hsCtaTracking=09fb52b8-320c-4327-ac21-f455923b0ad7%7C64452ffd-b533-4038-96b8-34dd5f11f224'>
 					<img
-						className='w-40'
+						className='w-20'
 						src='https://www.xsens.com/hubfs/Logo/Xsens_Logo_Orange_White.svg'
 					/>
 				</a>
