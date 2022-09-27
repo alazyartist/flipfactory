@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.popout {
+		border-radius: 9px;
+		box-shadow: 3px 3px 8px #27272a, -3px -3px 8px #5d5d5d;
+	}
+	.tealpopin {
+		border-radius: 9px;
+		background: #2dd4bf;
+		box-shadow: inset 5px 5px 10px #25ae9d, inset -5px -5px 10px #35fae1;
+	}
+}
 @layer utilities {
 	.no-scrollbar::-webkit-scrollbar {
 		display: none;

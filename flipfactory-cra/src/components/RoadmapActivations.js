@@ -58,7 +58,7 @@ const ListItem = ({ blurred, percent, perk, isLast, perkName }) => {
 	return (
 		<div
 			onClick={() => setOpen(!open)}
-			className={`h-20 ${blurred ? `blur-xl` : `blur-none`}`}>
+			className={`h-14 ${blurred ? `blur-xl` : `blur-none`}`}>
 			<li className='flex flex-col gap-2 z-10 rounded-xl place-items-center bg-zinc-800 font-inter text-zinc-300 p-2'>
 				<div className='flex gap-2 w-full place-items-center'>
 					<div className='text-2xl z-20 px-3 bg-inherit text-center w-20 text-zinc-500'>

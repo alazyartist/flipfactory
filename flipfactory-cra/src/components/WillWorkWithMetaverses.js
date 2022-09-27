@@ -2,9 +2,11 @@ import React from "react";
 
 const WillWorkWithMetaverses = () => {
 	return (
-		<div className='text-zinc-300 font-lucky font-black text-center text-5xl flex flex-col gap-2 p-3'>
+		<div
+			style={{ "text-shadow": "4px 4px 4px #134e4a" }}
+			className=' text-zinc-300 font-lucky font-black text-center text-5xl flex flex-col gap-2 p-3'>
 			Buy Once. <br /> Use Anywhere
-			<div className='flex bg-zinc-900 gap-2'>
+			<div className='flex gap-2'>
 				<a
 					target={"_blank"}
 					className='w-1/3 place-self-center'

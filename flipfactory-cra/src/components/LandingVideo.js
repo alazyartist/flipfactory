@@ -18,6 +18,7 @@ const LandingVideo = () => {
 				className='scale-[1.75] h-full  w-full'
 				loop
 				muted
+				playsInline
 				controls={false}
 				autoPlay>
 				<source src={vsrc} type='video/mp4' />

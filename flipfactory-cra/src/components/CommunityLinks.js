@@ -14,10 +14,12 @@ const CommunityLinks = () => {
 				<FaTelegramPlane />
 				Telegram
 			</div>
-			<div className='flex gap-2 place-content-center place-items-center'>
-				<FaTwitter />
-				Twitter
-			</div>
+			<a href='https://twitter.com/flipfactory_io'>
+				<div className='flex gap-2 place-content-center place-items-center'>
+					<FaTwitter />
+					Twitter
+				</div>
+			</a>
 		</div>
 	);
 };

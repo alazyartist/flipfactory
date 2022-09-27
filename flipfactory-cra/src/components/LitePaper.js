@@ -18,6 +18,10 @@ const LitePaper = () => {
 				<IoIosArrowBack className='text-5xl' />
 				<div className='font-inter font-black pb-4 text-5xl'>litepaper</div>
 			</Link>
+			<div className='font-inter text-sm'>
+				Welcome to the litepaper. where we try to explain what the fuck we are
+				doing here.
+			</div>
 			<ComingMetaverses />
 			<Emotesemotesemotes />
 			<WhyThisTeam />

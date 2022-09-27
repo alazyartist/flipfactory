@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSprings, animated, to as interpolate } from "@react-spring/web";
+import { IoMdArrowUp } from "react-icons/io";
 import { useDrag } from "@use-gesture/react";
 import styles from "./styles.module.css";
 const cards = [
@@ -69,9 +70,6 @@ export default function CardStack() {
 	// Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
 	return (
 		<>
-			<div className='text-zinc-300 font-lucky text-3xl text-center'>
-				Swipe Me
-			</div>
 			<div className='relative w-full flex place-items-center overflow-hidden h-[55vh]'>
 				{props.map(({ x, y, rot, scale }, i) => (
 					<animated.div className={styles.deck} key={i} style={{ x, y }}>
@@ -85,6 +83,9 @@ export default function CardStack() {
 						/>
 					</animated.div>
 				))}
+				<div className='absolute bottom-5 flex place-items-center place-content-center w-full text-zinc-300 font-lucky text-3xl text-center'>
+					Swipe Me <IoMdArrowUp />
+				</div>
 			</div>
 		</>
 	);

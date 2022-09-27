@@ -31,7 +31,7 @@ const EmoteScene = () => {
 				<OrbitControls
 					makeDefault
 					maxZoom={2}
-					rotateSpeed={0.1}
+					rotateSpeed={0.3}
 					maxPolarAngle={1.5}
 					minPolarAngle={0.95}
 				/>
