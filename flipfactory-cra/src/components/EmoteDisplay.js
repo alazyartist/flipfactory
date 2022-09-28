@@ -7,7 +7,9 @@ const EmoteDisplay = () => {
 	return (
 		<div className='w-full flex flex-col place-conetnt-center place-items-center'>
 			<div className='flex bg-gradient-to-b from-sky-300  rounded-t-xl to-zinc flex-col place-content-center place-self-center w-full h-[50vh] place-items-center'>
-				<div className=' font-lucky text-4xl text-zinc-300'>{currentAnim}</div>
+				<div className=' font-lucky text-3xl text-center text-zinc-300'>
+					{currentAnim}
+				</div>
 				{!noCanvas && (
 					<Canvas className='rounded-xl'>
 						<EmoteScene />

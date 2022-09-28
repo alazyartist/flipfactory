@@ -10,7 +10,6 @@ function App() {
 					<Routes>
 						<Route path='/' element={<Home />} />
 						<Route path='/litepaper' element={<LitePaper />} />
-						<Route path='/scroll' element={<Scroll />} />
 					</Routes>
 				</div>
 			</div>

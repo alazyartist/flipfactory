@@ -11,12 +11,12 @@ const FAQ = () => {
 		{
 			title: "What's a mint?",
 			description:
-				"Minting is how you purchase an NFT and stamp it onto the blockchain, our first mint will be the NFTrickers. Trickers are the key to bringing the Flip Factory online to start production of emotes and will be rewarded for their contributions as the factory grows.",
+				"Minting is how you purchase an NFT or Digital Asset and stamp it onto the blockchain, our first mint will be the Flip Factory Employee ID Card (EIC). EIC’s are the key to bringing the Flip Factory online to start production of emotes and will be rewarded for their contributions as the factory grows.",
 		},
 		{
 			title: "What do I get?",
 			description:
-				"Holders of an NFTricker will be given full access to everything produced by Flip Factory, and will be awarded with everything necessary to play the Scrolls of Ambu game during development. This includes but is not limited to: 3D character model, Battle pass, PoT/Vesting protocols, Power ups and more. Minted NFTrickers will award 1 free to claim NFT emote from the Emote Machine 1.0, and access to vesting/proof of trick protocols developed by the team. ",
+				"EIC Holders will be given opportunity to claim 1 Free NFT emote from the Emote Machine 1.0, and access to vesting/proof of trick protocols developed by the team. Holders will also be granted the chance to claim everything necessary to play the Scrolls of Ambu game during development. This includes but is not limited to: 3D character model, Battle pass, PoT/Vesting protocols, Power ups and more.",
 		},
 		{
 			title: "Who is Ambu and what’s with the scrolls?",
@@ -36,8 +36,7 @@ const FAQ = () => {
 		{
 			title: "What are my rights",
 			description:
-				//TODO
-				"Owning a Union Member or Emote NFT offered by Flip Factory gives holders full commercial rights and freedom to create or monetize as they see fit. ",
+				"Owning an EIC Digital Asset offered by Flip Factory will come with the opportunity to claim full commercial IP rights to future Digital Assets offered by FF that are also held by the user.",
 		},
 		{
 			title: "When mint?",

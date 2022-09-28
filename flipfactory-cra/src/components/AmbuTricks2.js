@@ -7,6 +7,7 @@ import { useGLTF, useAnimations, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import useFollowCam from "./useFollowCam";
+import useStore from "../hooks/useStore";
 export function AmbuTricks(props) {
 	const group = useRef();
 	const hipsRef = useRef();
@@ -14,13 +15,16 @@ export function AmbuTricks(props) {
 	const { nodes, materials, animations } = useGLTF("/AmbuTricks.glb");
 	const { mixer, actions, names } = useAnimations(animations, group);
 	const scroll = useScroll();
+	const ambuVisible = useStore((s) => s.ambuVisible);
 	useEffect(() => {
 		mixer.stopAllAction();
-		mixer.timeScale = 0.4;
-		// actions.Btwist.loop = THREE.LoopOnce;
-		actions.Btwist.clampWhenFinished = true;
-		actions["CorkX4>Dub"].play();
-	}, []);
+		if (ambuVisible) {
+			mixer.timeScale = 0.4;
+			// actions.Btwist.loop = THREE.LoopOnce;
+			actions.Btwist.clampWhenFinished = true;
+			actions["CorkX4>Dub"].play();
+		}
+	}, [ambuVisible]);
 
 	useFollowCam(hipsRef);
 

@@ -3,41 +3,54 @@ import { Link } from "react-router-dom";
 import BatteriesIncluded from "../components/BatteriesIncluded";
 import CommunityLinks from "../components/CommunityLinks";
 // import EmoteDisplay from "../components/EmoteDisplay";
-import ExampleCharachterCarousel from "../components/ExampleCharachterCarousel";
 import FAQ from "../components/FAQ";
 import FlipFactoryLogoComposite from "../components/FlipFactoryLogoComposite";
 import LandingVideo from "../components/LandingVideo";
-import OthersideLandPlots from "../components/OthersideLandPlots";
+// import OthersideLandPlots from "../components/OthersideLandPlots";
 // import RoadmapActivations from "../components/RoadmapActivations";
 // import RoadmapGoals from "../components/RoadmapGoals";
 import TrickedexEmbed from "../components/TrickedexEmbed";
 import WelcomeText from "../components/WelcomeText";
 import WillWorkWithMetaverses from "../components/WillWorkWithMetaverses";
 import { IoIosPaper } from "react-icons/io";
-import OthersideLandText from "../components/litepaper/OthersideLandText";
+// import OthersideLandText from "../components/litepaper/OthersideLandText";
 // import CardStack from "../components/CardStack";
 import { Suspense } from "react";
-import { FFLogo } from "../components/FFLogo";
 import useOnScreen from "../hooks/useOnScreen";
 import { useSpring, animated, config } from "react-spring";
+import useStore from "../hooks/useStore";
 const RoadmapActivations = lazy(() =>
 	import("../components/RoadmapActivations")
 );
 const CardStack = lazy(() => import("../components/CardStack"));
 const RoadmapGoals = lazy(() => import("../components/RoadmapGoals"));
 const AmbuScene = lazy(() => import("../components/AmbuScene"));
-const EmoteDisplay = lazy(() => import("../components/EmoteDisplay"));
+const OthersideLandPlots = lazy(() =>
+	import("../components/OthersideLandPlots")
+);
 const Home = () => {
 	const [bannerRef, bannerVisible] = useOnScreen({ rootMargin: "-200px" });
 	const [linksRef, linksVisible] = useOnScreen({ rootMargin: "-50%" });
 	const [roadmapRef, roadmapVisible] = useOnScreen({ rootMargin: "15px" });
+	const [landRef, landVisible] = useOnScreen({ rootMargin: "0px" });
+	const setAmbuVisible = useStore((s) => s.setAmbuVisible);
+	const setEmotesVisible = useStore((s) => s.setEmotesVisible);
+	const EmoteDisplay = lazy(() => import("../components/EmoteDisplay"));
+	// useEffect(() => {
+	// 	console.log("banner", bannerVisible);
+	// 	console.log("land", landVisible);
+	// 	console.log("links", linksVisible);
+	// 	console.log("roadmap", roadmapVisible);
+	// }, [bannerVisible, landVisible, linksVisible, roadmapVisible]);
 
 	useEffect(() => {
-		console.log(linksVisible);
-	}, [bannerVisible]);
+		setAmbuVisible(linksVisible);
+	}, [linksVisible]);
+	useEffect(() => {
+		setEmotesVisible(landVisible);
+	}, [landVisible]);
 
 	const heightAnim = useSpring({
-		from: { height: "100vh" },
 		to: { height: bannerVisible ? "100vh" : "30vh" },
 		config: { ...config.stiff },
 	});
@@ -46,7 +59,6 @@ const Home = () => {
 		config: { ...config.stiff },
 	});
 	const opacityLinkAnim = useSpring({
-		from: { opacity: "0" },
 		to: { opacity: roadmapVisible ? "1" : "0" },
 		config: { ...config.stiff },
 	});
@@ -115,10 +127,12 @@ const Home = () => {
 				{/* <ExampleCharachterCarousel /> */}
 				<Suspense>
 					<CardStack />
+					<OthersideLandPlots />
 				</Suspense>
-				<OthersideLandPlots />
 				<BatteriesIncluded />
-				<div className='bg-zinc-800 text-5xl rounded-xl py-6 p-2 text-zinc-300 font-lucky place-items-center place-content-center flex'>
+				<div
+					ref={landRef}
+					className='bg-zinc-800 text-5xl rounded-xl py-6 p-2 text-zinc-300 font-lucky place-items-center place-content-center flex'>
 					<a
 						className='flex flex-col'
 						target={"_blank"}
@@ -129,8 +143,9 @@ const Home = () => {
 						</div>
 					</a>
 				</div>
+				{/* <TrickedexEmbed /> */}
+
 				<div className='  p-2 flex flex-col'>
-					{/* <TrickedexEmbed /> */}
 					<Suspense
 						fallback={
 							<div className='font-lucky text-center text-4xl text-zinc-300'>

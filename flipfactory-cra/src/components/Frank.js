@@ -11,15 +11,15 @@ export function Frank({ ...props }) {
 	const { nodes, materials, animations } = useGLTF("/Frank.glb");
 	const { actions, names, mixer } = useAnimations(animations, group);
 	const { count, setCount } = useStore();
+	const emotesVisible = useStore((s) => s.emotesVisible);
 	useEffect(() => {
-		if (count > 0) {
-			mixer.stopAllAction();
-
+		mixer.stopAllAction();
+		if (count > 0 && emotesVisible) {
 			actions[names[count]].timeScale = 0.7;
 			actions[names[count]].play();
 			setCurrentAnim(names[count]);
 		}
-	}, [count]);
+	}, [count, emotesVisible]);
 	useFollowCam(hipsRef);
 	return (
 		<group ref={group} {...props} dispose={null}>
