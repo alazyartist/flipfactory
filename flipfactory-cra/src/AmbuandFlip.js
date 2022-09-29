@@ -25,8 +25,18 @@ const AmbuandFlip = () => {
 	return (
 		<div className='flex flex-col pb-6 gap-2'>
 			<div className=' w-full p-2  place-content-center place-items-center flex gap-2'>
-				<img className='w-1/2 rounded-xl' src={"./flip.png"} />
-				<img className='w-1/2 rounded-xl' src={"./ambu.png"} />
+				<img
+					width={"200px"}
+					height={"200px"}
+					className='w-1/2 rounded-xl'
+					src={"./flip.png"}
+				/>
+				<img
+					width={"200px"}
+					height={"200px"}
+					className='w-1/2 rounded-xl'
+					src={"./ambu.png"}
+				/>
 			</div>
 			<div className='p-3 min-h-[10rem] h-fit text-zinc-300 relative rounded-xl bg-zinc-800'>
 				{dialogue[count]}{" "}
@@ -34,6 +44,7 @@ const AmbuandFlip = () => {
 					{" "}
 					{dialogue.map((d) => (
 						<div
+							key={Math.random()}
 							className={`h-3 w-3 rounded-full ${
 								dialogue.indexOf(d) === count ? "bg-teal-400" : "bg-zinc-300"
 							}`}></div>

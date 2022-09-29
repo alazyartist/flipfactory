@@ -12,6 +12,8 @@ const WillWorkWithMetaverses = () => {
 					className='w-1/3 place-self-center'
 					href='https://otherside.xyz'>
 					<img
+						width={"200px"}
+						height={"200px"}
 						className='mix-blend-screen'
 						src='https://www.nftculture.com/wp-content/uploads/2022/04/2022-04-26-15_46_18-Otherside-%E2%80%94-Coming-4_30.png'
 					/>
@@ -21,6 +23,8 @@ const WillWorkWithMetaverses = () => {
 					className='w-1/3 place-self-center'
 					href='https://sandbox.game'>
 					<img
+						width={"200px"}
+						height={"200px"}
 						className='w-full'
 						src='https://www.sandbox.game/img/01_Top_Bar/TheSandboxLogo.svg'
 					/>
@@ -30,7 +34,7 @@ const WillWorkWithMetaverses = () => {
 					target={"_blank"}
 					className='w-1/3 place-self-center'
 					href='https://decentraland.org'>
-					<img src='./Decentraland-logo.png' />
+					<img width={"200px"} height={"200px"} src='./Decentraland-logo.png' />
 				</a>
 			</div>
 			and more!!

@@ -36,4 +36,4 @@ export function Frank({ ...props }) {
 	);
 }
 
-useGLTF.preload("/Frank.glb");
+// useGLTF.preload("/Frank.glb");

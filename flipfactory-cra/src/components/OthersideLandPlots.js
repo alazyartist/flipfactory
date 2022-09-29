@@ -9,14 +9,22 @@ const OthersideLandPlots = () => {
 						<span className='font-black'>Otherside Plot</span>
 						<span className='font-lucky '>#108</span>
 					</div>
-					<img className='rounded-xl p-2  w-full' src='./Otherside108.png' />
+					<img
+						loading='lazy'
+						className='rounded-xl p-2  w-full'
+						src='./Otherside108.png'
+					/>
 				</div>
 				<div className='max-w-[700px]'>
 					<div>
 						<span className='font-black'>Otherside Plot</span>
 						<span className='font-lucky '>#64420</span>
 					</div>
-					<img className='rounded-xl p-2  w-full' src='./Otherside64420.png' />
+					<img
+						loading='lazy'
+						className='rounded-xl p-2  w-full'
+						src='./Otherside64420.png'
+					/>
 				</div>
 			</div>
 		</div>
