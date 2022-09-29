@@ -3,18 +3,16 @@ import { Canvas } from "@react-three/fiber";
 import EmoteScene from "./EmoteScene";
 import useStore from "../hooks/useStore";
 const EmoteDisplay = () => {
-	const { count, setCount, currentAnim, noCanvas } = useStore();
+	const { count, setCount, currentAnim } = useStore();
 	return (
 		<div className='w-full flex flex-col place-conetnt-center place-items-center'>
 			<div className='flex bg-gradient-to-b from-sky-300  rounded-t-xl to-zinc flex-col place-content-center place-self-center w-full h-[50vh] place-items-center'>
 				<div className=' font-lucky text-3xl text-center text-zinc-300'>
 					{currentAnim}
 				</div>
-				{!noCanvas && (
-					<Canvas className='rounded-xl'>
-						<EmoteScene />
-					</Canvas>
-				)}
+				<Canvas className='rounded-xl'>
+					<EmoteScene />
+				</Canvas>
 			</div>
 			<div
 				onClick={() => setCount(count + 1)}
