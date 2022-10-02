@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, Suspense } from "react";
+import React, { lazy, useEffect, Suspense, useState } from "react";
 import BatteriesIncluded from "../components/BatteriesIncluded";
 import CommunityLinks from "../components/CommunityLinks";
 import FAQ from "../components/FAQ";
@@ -20,18 +20,7 @@ const OthersideLandPlots = lazy(() =>
 const EmoteDisplay = lazy(() => import("../components/EmoteDisplay"));
 
 const Home = () => {
-	const [roadmapRef, roadmapVisible] = useOnScreen({ rootMargin: "-15px" });
-	const [landRef, landVisible] = useOnScreen({ rootMargin: "0px" });
-	const setAmbuVisible = useStore((s) => s.setAmbuVisible);
-	const setEmotesVisible = useStore((s) => s.setEmotesVisible);
-	// useEffect(() => {
-	// 	if (linksVisible === true) {
-	// 		setAmbuVisible(true);
-	// 	}
-	// }, [linksVisible]);
-	useEffect(() => {
-		setEmotesVisible(landVisible);
-	}, [landVisible]);
+	const [showEmoteDisplay, setShowEmoteDisplay] = useState(false);
 
 	return (
 		<>
@@ -49,7 +38,6 @@ const Home = () => {
 				<div className='p-2'>
 					<AmbuandFlip />
 					<div
-						ref={roadmapRef}
 						className='rounded-xl bg-gradient-to-tr to-teal-400 
 								from-[#6560ff] flex flex-col'>
 						<Suspense>
@@ -65,15 +53,24 @@ const Home = () => {
 				<BatteriesIncluded />
 				<BuyOurShit />
 
-				<div ref={landRef} className='  p-2 flex flex-col'>
-					<Suspense
-						fallback={
-							<div className='font-lucky text-center text-4xl text-zinc-300'>
-								Acquiring Tricks..
-							</div>
-						}>
-						<EmoteDisplay />
-					</Suspense>
+				<div className='  p-2 flex flex-col'>
+					{!showEmoteDisplay && (
+						<button
+							onClick={() => setShowEmoteDisplay(!showEmoteDisplay)}
+							className='text-zinc-300 rounded-xl bg-sky-400 h-60 w-full font-lucky text-2xl'>
+							Show Emote Display
+						</button>
+					)}
+					{showEmoteDisplay && (
+						<Suspense
+							fallback={
+								<div className='font-lucky text-center text-4xl h-60 flex place-items-center place-content-center text-zinc-300'>
+									Acquiring Tricks..
+								</div>
+							}>
+							<EmoteDisplay />
+						</Suspense>
+					)}
 					<FAQ />
 				</div>
 				<CommunityLinks />

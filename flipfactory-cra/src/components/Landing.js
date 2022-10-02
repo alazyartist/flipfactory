@@ -14,13 +14,14 @@ const Landing = () => {
 	const location = useLocation();
 	const [loaded, setLoaded] = useState(false);
 	const heightAnim = useSpring({
-		from: { height: "100vh" },
-		to: { height: loaded ? "40vh" : "30vh" },
+		from: { height: "0vh" },
+		to: { height: loaded ? "40vh" : "35vh" },
 		config: { ...config.stiff },
 	});
 
 	const opacityBannerAnim = useSpring({
-		to: { opacity: bannerVisible ? "1" : "0" },
+		from: { opacity: "0" },
+		to: { opacity: "1" },
 		config: { ...config.stiff },
 	});
 	const opacityLinkAnim = useSpring({
@@ -32,16 +33,13 @@ const Landing = () => {
 	useEffect(() => {
 		setLoaded(true);
 	}, []);
+
 	useEffect(() => {
 		if (location.pathname.includes("/home")) {
 			setLoaded(false);
 		}
 	}, [location]);
-	useEffect(() => {
-		if (linksVisible === true) {
-			// setTimeout(() => nav("home"), 1000);
-		}
-	}, [linksVisible]);
+
 	return (
 		<div className='w-full h-full'>
 			<animated.div
@@ -75,8 +73,8 @@ const Landing = () => {
 						Litepaper
 					</Link>
 				</animated.div>
-				{loaded && (
-					<div className='mt-20 flex place-content-center place-items-center'>
+				{!location.pathname.includes("/home") && (
+					<div className='h-20 flex place-content-center place-items-center'>
 						<button
 							onClick={() => nav("/home")}
 							className='font-lucky text-zinc-300 text-4xl bg-teal-600 rounded-xl p-2'>

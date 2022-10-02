@@ -83,7 +83,9 @@ export default function CardStack() {
 						/>
 					</animated.div>
 				))}
-				<div className='absolute bottom-5 flex place-items-center place-content-center w-full text-zinc-300 font-lucky text-3xl text-center'>
+				<div
+					style={{ textShadow: "4px 4px 4px #18181b" }}
+					className='absolute bottom-5 flex place-items-center place-content-center w-full text-zinc-300 font-lucky text-3xl text-center'>
 					Swipe Me <IoMdArrowUp />
 				</div>
 			</div>
