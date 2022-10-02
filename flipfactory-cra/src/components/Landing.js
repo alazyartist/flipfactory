@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import { animated, config, useSpring } from "react-spring";
 import useOnScreen from "../hooks/useOnScreen";
 import FlipFactoryLogoComposite from "./FlipFactoryLogoComposite";
@@ -6,33 +6,40 @@ import LandingVideo from "./LandingVideo";
 import WelcomeText from "./WelcomeText";
 import WillWorkWithMetaverses from "./WillWorkWithMetaverses";
 import { IoIosPaper } from "react-icons/io";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const Landing = () => {
 	const [linksRef, linksVisible] = useOnScreen({ rootMargin: "0px" });
 	const [bannerRef, bannerVisible] = useOnScreen({ rootMargin: "-200px" });
+	const location = useLocation();
+	const [loaded, setLoaded] = useState(false);
 	const heightAnim = useSpring({
 		from: { height: "100vh" },
-		to: { height: bannerVisible ? "100vh" : "40vh" },
+		to: { height: loaded ? "40vh" : "30vh" },
 		config: { ...config.stiff },
 	});
-	const height2Anim = useSpring({
-		from: { height: "100vh" },
-		to: { height: bannerVisible ? "100vh" : "60vh" },
-		config: { ...config.stiff },
-	});
+
 	const opacityBannerAnim = useSpring({
 		to: { opacity: bannerVisible ? "1" : "0" },
 		config: { ...config.stiff },
 	});
 	const opacityLinkAnim = useSpring({
-		to: { opacity: bannerVisible ? "0" : "1" },
+		from: { opacity: 0 },
+		to: { opacity: 1 },
 		config: { ...config.stiff, duration: 700 },
 	});
 	const nav = useNavigate();
 	useEffect(() => {
+		setLoaded(true);
+	}, []);
+	useEffect(() => {
+		if (location.pathname.includes("/home")) {
+			setLoaded(false);
+		}
+	}, [location]);
+	useEffect(() => {
 		if (linksVisible === true) {
-			setTimeout(() => nav("home"), 1000);
+			// setTimeout(() => nav("home"), 1000);
 		}
 	}, [linksVisible]);
 	return (
@@ -44,7 +51,7 @@ const Landing = () => {
 				<div ref={bannerRef} className='popout hover:shadow-none group'>
 					<div className=' tealpopin group-hover:shadow-none flex flex-col rounded-xl place-content-center group-hover:bg-opacity-5 w-full bg-teal-400'>
 						<FlipFactoryLogoComposite />
-						<WelcomeText />
+						<WelcomeText loaded={loaded} />
 					</div>
 				</div>
 			</animated.div>
@@ -57,7 +64,7 @@ const Landing = () => {
 				}>
 				<LandingVideo />
 			</Suspense>
-			<animated.div style={{ ...height2Anim }} className=' w-full'>
+			<div className=' w-full'>
 				<WillWorkWithMetaverses />
 				<animated.div style={{ ...opacityLinkAnim }}>
 					<Link
@@ -68,7 +75,16 @@ const Landing = () => {
 						Litepaper
 					</Link>
 				</animated.div>
-			</animated.div>
+				{loaded && (
+					<div className='mt-20 flex place-content-center place-items-center'>
+						<button
+							onClick={() => nav("/home")}
+							className='font-lucky text-zinc-300 text-4xl bg-teal-600 rounded-xl p-2'>
+							Enter FlipFactory
+						</button>
+					</div>
+				)}
+			</div>
 			<Outlet />
 		</div>
 	);

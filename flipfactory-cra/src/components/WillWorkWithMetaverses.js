@@ -3,7 +3,7 @@ import React from "react";
 const WillWorkWithMetaverses = () => {
 	return (
 		<div
-			style={{ "text-shadow": "4px 4px 4px #134e4a" }}
+			style={{ textShadow: "4px 4px 4px #134e4a" }}
 			className=' text-zinc-300 font-lucky font-black text-center text-5xl flex flex-col gap-2 p-3'>
 			Buy Once. <br /> Use Anywhere
 			<div className='flex gap-2'>
