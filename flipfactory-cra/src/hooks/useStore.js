@@ -4,7 +4,7 @@ import create from "zustand";
 const useStore = create((set) => ({
 	emotesVisible: false,
 	setEmotesVisible: (value) => set(() => ({ emotesVisible: value })),
-	ambuVisible: false,
+	ambuVisible: true,
 	setAmbuVisible: (value) => set(() => ({ ambuVisible: value })),
 	count: 1,
 	setCount: (value) => set(() => ({ count: value % 11 })),

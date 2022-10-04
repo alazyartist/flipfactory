@@ -7,6 +7,10 @@ import useOnScreen from "../hooks/useOnScreen";
 import useStore from "../hooks/useStore";
 import BuyOurShit from "../components/BuyOurShit";
 import AmbuandFlip from "../AmbuandFlip";
+import FlipFactoryIntrotext from "../components/FlipFactoryIntrotext";
+import ExplaingEmployeeId from "../components/ExplaingEmployeeId";
+import WhatsHappeningInOtherside from "../components/WhatsHappeningInOtherside";
+import MintMakeMote from "../components/MintMakeMote";
 
 const RoadmapActivations = lazy(() =>
 	import("../components/RoadmapActivations")
@@ -25,20 +29,16 @@ const Home = () => {
 	return (
 		<>
 			<div className='p-4 flex flex-col gap-2'>
-				{/* <animated.div style={{ ...opacityLinkAnim }}>
-					<Link
-						ref={linksRef}
-						className={`flex place-content-center rounded-xl bg-zinc-800 p-2 place-items-center w-full text-center text-3xl font-inter font-black text-zinc-300`}
-						to={"/litepaper"}>
-						<IoIosPaper className='text-zinc-200' />
-						Litepaper
-					</Link>
-				</animated.div> */}
-
 				<div className='p-2'>
+					<FlipFactoryIntrotext />
+					<Suspense>
+						<CardStack />
+					</Suspense>
+					<ExplaingEmployeeId />
 					<AmbuandFlip />
+					<MintMakeMote />
 					<div
-						className='rounded-xl bg-gradient-to-tr to-teal-400 
+						className='mt-4 rounded-xl bg-gradient-to-tr to-teal-400 
 								from-[#6560ff] flex flex-col'>
 						<Suspense>
 							<RoadmapGoals />
@@ -46,8 +46,8 @@ const Home = () => {
 						</Suspense>
 					</div>
 				</div>
+				<WhatsHappeningInOtherside />
 				<Suspense>
-					<CardStack />
 					<OthersideLandPlots />
 				</Suspense>
 				<BatteriesIncluded />
@@ -58,7 +58,7 @@ const Home = () => {
 						<button
 							onClick={() => setShowEmoteDisplay(!showEmoteDisplay)}
 							className='text-zinc-300 rounded-xl bg-sky-400 h-60 w-full font-lucky text-2xl'>
-							Show Emote Display
+							Click to Load in some examples!
 						</button>
 					)}
 					{showEmoteDisplay && (
