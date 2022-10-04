@@ -14,7 +14,7 @@ import OthersideLandPlots from "./OthersideLandPlots";
 const LitePaper = () => {
 	return (
 		<div className='w-full p-4 h-full no-scrollbar overflow-y-scroll font-inter text-zinc-300'>
-			<Link to={"/"} className='flex gap-2'>
+			<Link to={"/home"} className='flex gap-2'>
 				<IoIosArrowBack className='text-5xl' />
 				<div className='font-inter font-black pb-4 text-5xl'>litepaper</div>
 			</Link>
