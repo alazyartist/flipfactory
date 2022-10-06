@@ -3,6 +3,7 @@ const AmbuandFlip = () => {
 	const [count, setCount] = useState(0);
 	const [ambu, setAmbu] = useState(false);
 	const AmbuScene = lazy(() => import("./components/AmbuScene"));
+	const [displayText, setDisplayText] = useState("");
 	const dialogue = [
 		[
 			"Flip",
@@ -40,10 +41,10 @@ const AmbuandFlip = () => {
 
 		[
 			"Flip",
-			"Now before we go further into the factory and learn about everything involved, I want to say thanks for stopping by!",
+			"Now before we go further into the factory and learn about everything involved, I want to say thanks for stopping by! But before you go my friend wants to show you something.",
 		],
 
-		["Flip", "But before you go my friend wants to show you something."],
+		["Ambu", "#%$#"],
 	];
 	useEffect(() => {
 		if (count === 0) {
@@ -52,30 +53,45 @@ const AmbuandFlip = () => {
 		if (count === dialogue.length - 1) {
 			setAmbu(true);
 		}
+		setDisplayText("");
 	}, [count]);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setDisplayText(dialogue[count][1].slice(0, displayText.length + 1));
+		}, 50);
+		return () => clearTimeout(timeout);
+	}, [displayText]);
 	return (
 		<div className='flex flex-col pb-6 gap-2'>
-			<div className=' w-full p-2  place-content-center place-items-center flex gap-2'>
-				<img
-					width={"200px"}
-					height={"200px"}
-					className='w-1/2 rounded-xl'
-					src={"./flip.png"}
-				/>
-				<img
-					width={"200px"}
-					height={"200px"}
-					className='w-1/2 rounded-xl'
-					src={"./ambu.png"}
-				/>
-			</div>
+			<div className='lg:max-w-[800px] w-full p-2  place-content-center place-items-center flex gap-2'></div>
 			<div
 				className={`p-3 pb-8 min-h-[10rem] h-fit  relative rounded-xl ${
 					dialogue[count][0] === "Flip"
 						? "bg-[#6f5d70] text-zinc-300"
 						: "bg-[#a8edf2] text-zinc-800"
 				}`}>
-				{dialogue[count][1]}
+				<div className='flex gap-2'>
+					{dialogue[count][0] === "Flip" && (
+						<img
+							width={"200px"}
+							height={"200px"}
+							className='w-1/2 rounded-xl'
+							src={"./flip.png"}
+						/>
+					)}
+					{dialogue[count][0] === "Ambu" && (
+						<img
+							width={"200px"}
+							height={"200px"}
+							className='w-1/2 rounded-xl'
+							src={"./ambu.png"}
+						/>
+					)}
+					<div className='blinking-cursor relative speech  lg:text-3xl  bg-zinc-800 bg-opacity-20 p-4 lg:p-14 md:p-8 rounded-[20%] w-full'>
+						{displayText}
+					</div>
+				</div>
 				{ambu && (
 					<Suspense
 						fallback={
