@@ -6,11 +6,9 @@ const WelcomeText = ({ loaded }) => {
 			<p>
 				<span className='font-lucky text-3xl'>mint.make.mote.</span>
 			</p>
-			{loaded && (
-				<div className='text-md sm:text-xl font-inter font-bold'>
-					Your one stop shop for <br /> emotes across any metaverse.
-				</div>
-			)}
+			<div className='text-md sm:text-xl font-inter font-bold'>
+				Your one stop shop for <br /> emotes across any metaverse.
+			</div>
 		</div>
 	);
 };

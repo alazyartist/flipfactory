@@ -10,9 +10,9 @@ const MintMakeMote = () => {
 			</h2>
 			<img src={"./mint@0.5x.png"} className='w-full' />
 			<h2 className='font-inter p-2 text-center text-xl'>
-				As Long as you're holding your employeeId card you will be rewarded with
-				new emotes and other pieces you can use to make even more complex
-				motions.
+				As long as your EID is punched in the clock (staked) you will be
+				rewarded with new emotes and pieces to combine together and make new
+				more complex emotes
 			</h2>
 			<img src={"./claim@0.5x.png"} className='w-full' />
 			<h2 className='font-inter p-2 text-center text-xl'>
@@ -21,8 +21,10 @@ const MintMakeMote = () => {
 			</h2>
 			<img src={"./make@0.5x.png"} className='w-full' />
 			<h2 className='font-inter p-2 text-center text-xl'>
-				Then you can go flex on your friends with the craziest motions you've
-				ever seen. Or go sell them on the secondary market and make some more!
+				Then you can go flex on your friends in the metaverse with the craziest
+				movements you’ve ever seen! Play in the verse freely, save your moves to
+				compete in battle and keep earning, or sell on the open market and make
+				some more!
 			</h2>
 			<img src={"./mote@0.5x.png"} className='w-full' />
 		</div>

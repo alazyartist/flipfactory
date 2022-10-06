@@ -5,6 +5,7 @@ import ComingMetaverses from "./litepaper/ComingMetaverses";
 import Emotesemotesemotes from "./litepaper/Emotesemotesemotes";
 import How from "./litepaper/How";
 import OthersideLandText from "./litepaper/OthersideLandText";
+import ProjectOverview from "./litepaper/ProjectOverview";
 import Rewards from "./litepaper/Rewards";
 import ScrollsOfAmbu from "./litepaper/ScrollsOfAmbu";
 import WhatIsFlipFactory from "./litepaper/WhatIsFlipFactory";
@@ -22,6 +23,7 @@ const LitePaper = () => {
 				Welcome to the litepaper. where we try to explain what the fuck we are
 				doing here.
 			</div>
+			<ProjectOverview />
 			<ComingMetaverses />
 			<Emotesemotesemotes />
 			<WhyThisTeam />
