@@ -35,7 +35,6 @@ const Home = () => {
 						<CardStack />
 					</Suspense>
 					<ExplaingEmployeeId />
-					<AmbuandFlip />
 					<MintMakeMote />
 					<div
 						className='mt-4 rounded-xl bg-gradient-to-tr to-teal-400 

@@ -7,6 +7,7 @@ import WelcomeText from "./WelcomeText";
 import WillWorkWithMetaverses from "./WillWorkWithMetaverses";
 import { IoIosPaper } from "react-icons/io";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import AmbuandFlip from "../AmbuandFlip";
 
 const Landing = () => {
 	const [linksRef, linksVisible] = useOnScreen({ rootMargin: "0px" });
@@ -64,6 +65,7 @@ const Landing = () => {
 			</Suspense>
 			<div className=' w-full'>
 				<WillWorkWithMetaverses />
+				<AmbuandFlip />
 				<animated.div style={{ ...opacityLinkAnim }}>
 					<Link
 						ref={linksRef}
