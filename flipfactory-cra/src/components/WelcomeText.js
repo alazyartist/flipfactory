@@ -7,7 +7,7 @@ const WelcomeText = ({ loaded }) => {
 				<span className='font-lucky text-3xl'>mint.make.mote.</span>
 			</p>
 			<div className='text-md sm:text-xl font-inter font-bold'>
-				Your one stop shop for <br /> emotes across any metaverse.
+				Movements for the Metaverse.
 			</div>
 		</div>
 	);
